@@ -5221,4 +5221,4 @@ message.channel.stopTyping()
 
 
 let BTO_OWNERS  = ['471795779867115540','388702736968843264' ]
-client.login('NjU0NTk3ODgwNjEwMjkxNzIy.XfH4Hw.xGM4MxfKYiB-T344kPaYgBw-0Zg');
+client.login('NzYxNzc3ODI5NjI0Njc2MzYy.X3fi4w.b4QlsgjAet5t8z0sWA5tE5fWIok');
