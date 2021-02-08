@@ -30,10 +30,9 @@ const { get } = require("snekfetch");
 const guild = require("guild");
 const dateFormat = require("dateformat");
 const pretty = require("pretty-ms");
-client.login("NzYxNzc3ODI5NjI0Njc2MzYy.X3fi4w.u3khRPGkd1ZDOuCP1nFIg2NtyX8")
-
+client.login(process.env.TOKEN);
  ////////////////mrfix
-const prefix = "prefix";
+const prefix = "s-";
 var table = require("table").table;
 const Discord = require("discord.js");
 client.on("ready", () => {
@@ -51,15 +50,19 @@ client.on("ready", () => {
 client.on("message", m => {
   if (m.content === prefix + "help") {
     let Dashboard = `
-anti ban [number]
-anti kick [number]
-anti channelD [number]
-anti channelC [number]
-anti roleD [number]
-anti roleC [number]
-anti time [number]
-antibots [on / off]
-settings
+    
+    ┏━━━━•❅•°•❈ - •°•❅•━━━━┓
+   <a:emoji_33:786619895726997534> **SECURITY CMD**
+   
+<a:emoji_33:786619895726997534> ⇥ ${prefix}anti ban [number]
+<a:emoji_33:786619895726997534> ⇥ ${prefix}anti kick [number]
+<a:emoji_33:786619895726997534> ⇥ ${prefix}anti channelD [number]
+<a:emoji_33:786619895726997534> ⇥ ${prefix}anti channelC [number]
+<a:emoji_33:786619895726997534> ⇥ ${prefix}anti roleD [number]
+<a:emoji_33:786619895726997534> ⇥ ${prefix}anti roleC [number]
+<a:emoji_33:786619895726997534> ⇥ ${prefix}anti time [numbers]
+<a:emoji_33:786619895726997534> ⇥ ${prefix}antibots [on / off]
+<a:emoji_33:786619895726997534> ⇥ ${prefix}settings
 
 lock
 unlock
@@ -115,14 +118,12 @@ client.on("message", message => {
     var embed = new Discord.RichEmbed()
       .setTitle("✨ | ClickHere To Add " + `${client.user.username}` + " .")
       .setURL(
-        "https://discordapp.com/oauth2/authorize?client_id=" +
-          `${client.user.id}` +
-          "&scope=bot&permissions=2080374975"
+        "https://discord.com/api/oauth2/authorize?client_id=790583289454133278&redirect_uri=https%3A%2F%2Fsource-pro.glitch.me&scope=applications.commands"
       )
       .setTimestamp()
       .setFooter(`Requested By | ${message.author.username}`)
       .setImage(
-        "https://media.discordapp.net/attachments/725981750135619594/753420592786702448/image0.gif"
+        ""
       )
       .setColor("RANDOM");
     message.channel.send({ embed });
@@ -145,7 +146,7 @@ client.on("message", message => {
       .addField("**Channels** : ", `» ${client.channels.size} `, true)
       .addField("**Users** : ", `» ${client.users.size} `, true)
       .addField("**Bot Name** :  ", `» ${client.user.tag} `, true)
-      .addField("**Bot Owner** :  ", `» MrFIX`, true) // تعديل مهم عدل هذا الرقم لايدي حسابك
+      .addField("**Bot Owner** :  ", `» JANO`, true) // تعديل مهم عدل هذا الرقم لايدي حسابك
       .setImage("")
       .setFooter(message.author.username, message.author.avatarURL);
     message.channel.send(bot);
@@ -980,10 +981,10 @@ const antiSpam = new AntiSpam({
 client.on("message", msg => {
   if (msg.author.bot) return;
   if (msg.content.includes("http")) {
-    if (msg.member.hasPermission("MANAGE_EMOJIS")) return;
+    if (msg.member.hasPermission("SEND_MESSAGES")) return;
     if (!msg.channel.guild) return;
     msg.delete();
-    msg.reply("```You cant send link .```");
+    msg.reply("```dont send links```");
   }
 });
 // ======== { • anti everyone • }======== //
