@@ -64,23 +64,34 @@ client.on("message", m => {
 <a:emoji_33:786619895726997534> ⇥ ${prefix}antibots [on / off]
 <a:emoji_33:786619895726997534> ⇥ ${prefix}settings
 
-lock
-unlock
+<a:emoji_22:786619517136666695> **ADMIN CMD**
 
-invite
-about
-server
-user
-profile
-Best Discord __AntiSpam__
-Best Discord __AntiShare Everyone & Here & Link .__`;
-    var addserver = `https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2080374975`;
-    var SUPPORT = `https://discord.gg/6ASrSeG`;
+<a:emoji_22:786619517136666695> ⇥ ${prefix}lock
+<a:emoji_22:786619517136666695> ⇥ ${prefix}unlock
+<a:emoji_22:786619517136666695> ⇥ ${prefix}kick
+<a:emoji_22:786619517136666695> ⇥ ${prefix}ban
+<a:emoji_22:786619517136666695> ⇥ ${prefix}mute
+<a:emoji_22:786619517136666695> ⇥ ${prefix}unmute
+<a:emoji_22:786619517136666695> ⇥ ${prefix}addrole
+<a:emoji_22:786619517136666695> ⇥ ${prefix}unrole
+<a:emoji_22:786619517136666695> ⇥ ${prefix}slowmode
+<a:emoji_22:786619517136666695> ⇥ ${prefix}movall
+
+<a:funnyyy:787434383392243732> **PUBLIC CMD**
+
+<a:funnyyy:787434383392243732> ⇥ ${prefix}invite
+<a:funnyyy:787434383392243732> ⇥ ${prefix}about
+<a:funnyyy:787434383392243732> ⇥ ${prefix}server
+<a:funnyyy:787434383392243732> ⇥ ${prefix}user
+<a:funnyyy:787434383392243732> ⇥ ${prefix}profile
+`;
+    var invite = `https://discord.com/oauth2/authorize?client_id=790583289454133278&redirect_uri=https%3A%2F%2Fsource-pro.glitch.me&scope=applications.commands`;
+    var OWNBOT = `https://discord.gg/8gUUHU8bSw`;
     let embed = new Discord.RichEmbed()
       .setTitle(`${m.author.username}`)
       .setDescription(
         `**${Dashboard}**
-  **[Add To Your Server ](${addserver})** | **[ Server Support](${SUPPORT})**`
+  **[invite ](${invite})** | **[ OWNBOT](${OWNBOT })**`
       )
       .setImage("");
     m.channel.send(embed);
